@@ -90,6 +90,11 @@ function getWeatherData(){
                 quarterNode.querySelector('.rain_vol_bar').style = "height:"+ quarter.rr10*5 +"px"
                 quarterNode.querySelector('img').src = conditions[quarter.weather].icon
                 dayNode.querySelector('.days').appendChild(quarterNode)
+
+                // quarterNode.addEventListener('click', () => {
+                //     console.log('click')
+                //     updateDataDetails(weatherData,quarter.day,quarter.period)
+                // })
             })
             container.appendChild(dayNode)
         })
