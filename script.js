@@ -89,12 +89,14 @@ function getWeatherData(){
                 quarterNode.querySelector('.rain_vol_bar').innerText = quarter.rr10
                 quarterNode.querySelector('.rain_vol_bar').style = "height:"+ quarter.rr10*5 +"px"
                 quarterNode.querySelector('img').src = conditions[quarter.weather].icon
+                
+                quarterNode.querySelector('img').addEventListener('click', () => {
+                    console.log('click')
+                    updateDataDetails(weatherData,quarter.day,quarter.period)
+                })
+
                 dayNode.querySelector('.days').appendChild(quarterNode)
 
-                // quarterNode.addEventListener('click', () => {
-                //     console.log('click')
-                //     updateDataDetails(weatherData,quarter.day,quarter.period)
-                // })
             })
             container.appendChild(dayNode)
         })
@@ -104,26 +106,6 @@ function getWeatherData(){
 }
 
 getWeatherData();
-
-
-
-function parseRainGraphLabels(weatherData){
-    const days = ["Dom", "Lun", "Mar", "Mie", "Jue", "Vie", "Sab"]
-    labels = []
-    weatherData.forEach((x, i) => {x.forEach((d,i) => {
-        const date = new Date(d.datetime)
-        labels.push(days[date.getDay()]+" "+date.getDate()+" "+date.getHours()+"hs")
-    })})
-    return labels        
-}
-
-function parseRainGraphData(weatherData,key){
-    data = []
-    weatherData.forEach((x, i) => {x.forEach((d,i) => {
-        data.push(d[key])
-    })})
-    return data
-}
 
 
 
