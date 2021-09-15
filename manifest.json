@@ -8,7 +8,9 @@
         "type": "image/png"
       }
     ],
-    "start_url": "https://piojopringlense.github.io/tiempo/index.html",
+    "start_url": "/index.html",
     "display": "standalone",
-    "orientation": "portrait"
+    "orientation": "portrait",
+    "background_color": "#060732",
+    "theme_color": "#060732"
   }
