@@ -62,9 +62,9 @@ function getWeatherData(){
         Tcurrent.innerHTML = weatherData.quarterly[day][period].temp2m + '°'
         tmax.innerHTML = weatherData.daily[day].tmax + '°'
         tmin.innerHTML = weatherData.daily[day].tmin + '°'
-        rain_proba.innerHTML = weatherData.quarterly[day][period].probarain + '%'
-        rain_total.innerHTML = weatherData.quarterly[day][period].rr10 + 'mm'
-        sun_time.innerHTML = weatherData.daily[day].sun_hours + 'h'
+        rain_proba.innerHTML = weatherData.quarterly[day][period].probarain
+        rain_total.innerHTML = weatherData.quarterly[day][period].rr10
+        sun_time.innerHTML = weatherData.daily[day].sun_hours
         icon.src = conditions[weatherData.daily[day].weather].icon
         weather_description.innerText = conditions[weatherData.daily[day].weather].tiempo
 

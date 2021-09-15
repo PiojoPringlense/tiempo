@@ -93,6 +93,10 @@ body {
 	font-weight: 700;
 }
 
+.units {
+	font-size: 1rem;
+}
+
 .container {
 	background-color: var(--clr-primary);
 	width: 85vw;
