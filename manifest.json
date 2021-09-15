@@ -1,0 +1,14 @@
+{
+    "short_name": "El tiempo",
+    "name": "Pronostico del tiempo en Guyancourt",
+    "icons": [
+      {
+        "src": "icon.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ],
+    "start_url": "/index.html",
+    "display": "standalone",
+    "orientation": "portrait"
+  }
